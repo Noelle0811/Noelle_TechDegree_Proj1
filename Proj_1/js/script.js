@@ -32,7 +32,7 @@ var disneyQuotes = [
     source: "Dumbo" 
   },
   {
-    quote:"Dont spend your time lookin' around for something you want that can/'t be found.", source: "The Jungle Book",
+    quote:"Dont spend your time lookin' around for something you want that can't be found.", source: "The Jungle Book",
 year: "1967"
 },
 
@@ -40,7 +40,7 @@ year: "1967"
  
 /////////////////////////////////////////////////////////////////////////////////
 /*** / 
-  Create the `getRandomQuote` function to:
+  getRandomQuote to get my quotes in random order
 ***/
 
 function getRandomQuote() {
@@ -48,22 +48,23 @@ function getRandomQuote() {
   return disneyQuotes[randomNumber];
   }
 
-//////////////////////////////////////////////////////////////////////////////////////////////
 
-// function getRandomColor() {
-//  var red = Math.floor(Math.random() * 256);
-//  var blue = Math.floor(Math.random() * 256);
-//  var yellow = Math.floor(Math.random() * 256);
-//  var green = Math.floor(Math.random() * 256);
-//  var orange = Math.floor(Math.random() * 256);
-//  var purple = Math.floor(Math.random() * 256);
-//  var RgdColor = 'rgb(' + red + ',' + green +',' + blue +')';
+function getRandomColor() {
+ var red = Math.floor(Math.random() * 256);
+ var blue = Math.floor(Math.random() * 256);
+ var yellow = Math.floor(Math.random() * 256);
+ var green = Math.floor(Math.random() * 256);
+ var orange = Math.floor(Math.random() * 256);
+ var purple = Math.floor(Math.random() * 256);
+ var RgdColor = 'rgb(' + red + ',' + green +',' + blue +')';
 
-// document.getElementsByTagName('body')[0].style.background = rgbColor;
+ document.getElementsByTagName('body')[0].style.background = rgbColor;
 
-// document.getElementsByTagName('button')[0].style.background = rgbColor;
-// }
+ document.getElementsByTagName('button')[0].style.background = rgbColor;
+ } 
 
+
+ 
 function printQuote() {
   console.log('clicked');
   var printQuote = getRandomQuote();
@@ -160,27 +161,10 @@ document.getElementById('loadQuote').addEventListener("click", printQuote, false
 
 // taking a quote from functiom getRandomQuote
 
-// functionprintQuote (){
-//     var printQuote = getRandomQuote();
-//     var Html = '<p class="quote>' + printQuote.quote + '</p>';
-//     Html += "<p class="source"> + printQuote.source + '</p>';
-//     Html += '<p class="source"> + printQuote.source + '</p>;
-
 
 // /******************************************
 
 
-// /** backgroundColor */
-
-// function getRandomColor() {
-//  var red = Math.floor(Math.random() * 256);
-//  var blue = Math.floor(Math.random() * 256);
-//  var yellow = Math.floor(Math.random() * 256);
-//  var green = Math.floor(Math.random() * 256);
-//  var orange = Math.floor(Math.random() * 256);
-//  var purple = Math.floor(Math.random() * 256);
-//  var RgdColor = 'rgb(' + red + ',' + green +',' + blue +')';
-//  document.body.style.background = backgroundColor
 
 
 // document.getElementsByTagName('body')[0].style.background = rgbColor;
