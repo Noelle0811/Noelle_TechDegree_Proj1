@@ -51,9 +51,9 @@ function getRandomQuote() {
 
 /** getRandomColor in my background */
  function getRandomColor() {
- var red = Math.floor(Math.random() * 255);
- var blue = Math.floor(Math.random() * 255);
- var green = Math.floor(Math.random() * 255);
+ var red = Math.floor(Math.random() * 256);
+ var blue = Math.floor(Math.random() * 256);
+ var green = Math.floor(Math.random() * 256);
  var rgbColor = `rgb(${red}, ${green}, ${blue})`;
 
  document.getElementsByTagName('body')[0].style.background = rgbColor;
