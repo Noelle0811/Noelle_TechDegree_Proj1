@@ -10,7 +10,7 @@ project 1 - A Random Quote Generator
  list of quotes I picked ***/
 var html = '';
 
-var disneyQuotes = [ 
+var quotes = [ 
   {
     quote:"If you focus on what you left behind, you will never be able to see what lies ahead.", 
     source: "Ratatouille"
@@ -28,13 +28,10 @@ var disneyQuotes = [
     source: "The Incredibles"
   },
   {
-    quote:"Don't just fly, soar.", 
-    source: "Dumbo" 
-  },
-  {
     quote:"Dont spend your time lookin' around for something you want that can't be found.", 
     source: "The Jungle Book",
     year: "1967"
+    citation: "Kipling", 
 }
 
 ];
@@ -45,8 +42,8 @@ var disneyQuotes = [
 ***/
 
 function getRandomQuote() {
-  var randomNumber = Math.floor(Math.random() * disneyQuotes.length);
-  return disneyQuotes[randomNumber];
+  var randomNumber = Math.floor(Math.random() * quotes.length);
+  return quotes[randomNumber];
   }
 
 /** getRandomColor in my background */
@@ -62,17 +59,43 @@ function getRandomQuote() {
 
 
 /** printQuote this is to call my functions */
-function printQuote() {
+/** function printQuote() {
   console.log('clicked');
   var printQuote = getRandomQuote();
   html = '<p class="quote">' + printQuote.quote + '</p>';
   html += '<p class="source">' + printQuote.source + '</p>';
-   if (printQuote.year) {
+  /** html += '<p class="citation">' + printQuote.source + '</p>'; */
+   /** if (printQuote.year) {
     html += '<p class="year">' + printQuote.year + '</p>'; 
   } else { 
-    html += '<p class="year"> unknown </p>'; 
-  }
-  /** this is calling my backgound colors */
+    html += '<p class="year"> unknown </p>'; */
+
+
+function printQuote() {
+  let randomQuote = getRandomQuote ();
+  getRandomColor(); 
+
+
+  html = '<p class="quote">' + randomQuote.quote + </p>'; 
+
+  if (randomQuote.source && randomQuote.year) {
+    html +='<p class="source">' + randomQuote.source + '<span class="citation">' + randomQuote.citation + '</span><span class="year">' + randomQuote.year + '</span></span></p>'
+  } else if (randomQuote.source) {
+    html +='p class="source">' + randomQuote.source + '<span class="citation">' + randomQuote.citation + </span></p>' 
+  } else if (randomQuote.year) {
+    html +='<p class="source">' + randomQuote.source + '<span class="year">' + randomQuote.year + </span></p>'
+   };
+
+   doctument.getElementById('quote-box').innerHTML = html;
+  };
+
+
+
+
+
+
+
+  /*** this is calling my backgound colors **/
   getRandomColor();
 
   document.getElementById('quote-box').innerHTML = html;
@@ -83,3 +106,4 @@ function printQuote() {
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
+let renew = setInterval(function(){ printQuote(); }, 5000); 
