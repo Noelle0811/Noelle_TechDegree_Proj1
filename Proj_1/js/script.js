@@ -30,7 +30,7 @@ var quotes = [
   {
     quote:"Dont spend your time lookin' around for something you want that can't be found.", 
     source: "The Jungle Book",
-    year: "1967"
+    year: "1967",
     citation: "Kipling", 
 }
 
@@ -57,46 +57,27 @@ function getRandomQuote() {
  document.getElementsByTagName('button')[0].style.background = rgbColor;
 } 
 
-
-/** printQuote this is to call my functions */
-/** function printQuote() {
-  console.log('clicked');
-  var printQuote = getRandomQuote();
-  html = '<p class="quote">' + printQuote.quote + '</p>';
-  html += '<p class="source">' + printQuote.source + '</p>';
-  /** html += '<p class="citation">' + printQuote.source + '</p>'; */
-   /** if (printQuote.year) {
-    html += '<p class="year">' + printQuote.year + '</p>'; 
-  } else { 
-    html += '<p class="year"> unknown </p>'; */
-
-
+    
 function printQuote() {
   let randomQuote = getRandomQuote ();
   getRandomColor(); 
 
 
-  html = '<p class="quote">' + randomQuote.quote + </p>'; 
-
+  html = '<p class="quote">' + randomQuote.quote + '</p>'
+ 
   if (randomQuote.source && randomQuote.year) {
     html +='<p class="source">' + randomQuote.source + '<span class="citation">' + randomQuote.citation + '</span><span class="year">' + randomQuote.year + '</span></span></p>'
   } else if (randomQuote.source) {
-    html +='p class="source">' + randomQuote.source + '<span class="citation">' + randomQuote.citation + </span></p>' 
+    html +='<p class="source">' + randomQuote.source + '<span class="citation">' + randomQuote.citation + '</span>'
   } else if (randomQuote.year) {
-    html +='<p class="source">' + randomQuote.source + '<span class="year">' + randomQuote.year + </span></p>'
+    html +='<p class="source">' + randomQuote.source + '<span class="year">' + randomQuote.year + '</span></p>'
    };
 
-   doctument.getElementById('quote-box').innerHTML = html;
+   document.getElementById('quote-box').innerHTML = html;
   };
 
-
-
-
-
-
-
-  /*** this is calling my backgound colors **/
-  getRandomColor();
+ 
+  getRandomColor(); { 
 
   document.getElementById('quote-box').innerHTML = html;
   // html += '<p class="source">' + printQuote.source + '</p>';
